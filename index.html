@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frédéric – Services à Domicile · Bordeaux</title>
+  <meta name="description" content="Frédéric Services : aide à domicile à Bordeaux et alentours. Courses, pharmacie, démarches administratives, livraisons. Un simple appel au 06 03 63 45 53." />
+  <meta name="keywords" content="aide à domicile, Bordeaux, courses, démarches administratives, services à la personne, Mérignac, Pessac" />
+  <meta name="author" content="Frédéric Manuel Decastro Carneiro" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="FR-33" />
+  <meta name="geo.placename" content="Bordeaux" />
+  <link rel="canonical" href="https://frederic-services.fr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Frédéric Services – Aide à domicile · Bordeaux" />
+  <meta property="og:description" content="Service humain et de confiance à Bordeaux : courses, démarches, livraisons. Pas d'application — un simple appel suffit." />
+  <meta property="og:site_name" content="Frédéric Services" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Frédéric Services – Bordeaux" />
+  <meta name="twitter:description" content="Aide à domicile à Bordeaux et alentours. Appelez le 06 03 63 45 53." />
+  <meta name="theme-color" content="#1A2F4A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #F5F1E8;
+      --warm-white: #FAF8F3;
+      --accent: #F2C230;
+      --accent-light: #F5D76E;
+      --accent-pale: #FDF6DC;
+      --navy: #1A2F4A;
+      --navy-mid: #243B5C;
+      --green: #3D9B5F;
+      --green-light: #6BB87E;
+      --green-pale: #E8F4EC;
+      --gold: #F2C230;
+      --gold-pale: #FDF6DC;
+      --text: #2C3E50;
+      --text-soft: #5A6B7D;
+      --text-light: #7A8A9A;
+      --border: #E5DFD3;
+      --sky: #D6EAF8;
+      --sky-dark: #A8C8E8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    /* ─── HEADER / NAV ─── */
+    header {
+      background: var(--navy);
+      padding: 0 clamp(1rem, 4%, 3rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      min-height: 72px;
+      height: auto;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.18);
+    }
+
+    .logo {
+      font-weight: 800;
+      color: var(--cream);
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-house {
+      width: 36px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+
+    .logo em {
+      font-style: normal;
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: 1.35rem;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--green-light);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.1rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 500;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+      margin-left: 1.35rem;
+    }
+
+    nav a:hover { opacity: 1; }
+
+    .nav-cta {
+      background: var(--accent) !important;
+      color: var(--navy) !important;
+      opacity: 1 !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 4px;
+      font-weight: 700 !important;
+    }
+
+    .nav-cta:hover { background: var(--accent-light) !important; }
+
+    .header-phone {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      padding: 10px;
+      background: transparent;
+      border: 1px solid rgba(245, 241, 232, 0.35);
+      border-radius: 6px;
+      cursor: pointer;
+      flex-shrink: 0;
+      z-index: 210;
+    }
+
+    .nav-toggle span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: var(--cream);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+
+    body.nav-open .nav-toggle span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    body.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+
+    body.nav-open .nav-toggle span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 35, 56, 0.55);
+      z-index: 150;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    body.nav-open .nav-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    body.nav-open { overflow: hidden; }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: var(--navy);
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 5% 8%;
+      gap: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 70% 50%, rgba(242,194,48,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(61,155,95,0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-content { position: relative; z-index: 1; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent-pale);
+      color: var(--navy);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border-radius: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-badge::before {
+      content: '●';
+      font-size: 0.5rem;
+      color: var(--green);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 3.8vw, 3.2rem);
+      font-weight: 800;
+      color: var(--cream);
+      line-height: 1.15;
+      margin-bottom: 1.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 em {
+      font-family: 'Caveat', cursive;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--accent-light);
+      font-size: 1.15em;
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    .hero-lead {
+      font-size: 1rem;
+      color: rgba(245,241,232,0.82);
+      font-weight: 400;
+      line-height: 1.75;
+      margin-bottom: 2.4rem;
+      max-width: 480px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--navy);
+      text-decoration: none;
+      padding: 0.9rem 2rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--cream);
+      text-decoration: none;
+      padding: 0.9rem 2rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1px solid rgba(245,241,232,0.35);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: rgba(245,241,232,0.7); background: rgba(255,255,255,0.05); }
+
+    .hero-card {
+      background: var(--warm-white);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.08);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-title {
+      font-family: 'Caveat', cursive;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      font-weight: 500;
+    }
+
+    .service-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      color: white;
+      font-weight: 700;
+    }
+
+    .ic-orange { background: #E8913A; }
+    .ic-green { background: var(--green); }
+    .ic-gold { background: var(--gold); color: var(--navy); }
+    .ic-purple { background: #7B5EA7; }
+    .ic-blue { background: #4A90D9; }
+
+    .hero-card-footer {
+      margin-top: 2rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .zone-dot {
+      width: 8px; height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ─── TRUST BAR ─── */
+    .trust-bar {
+      background: var(--accent-pale);
+      border-top: 1px solid #E8DFC0;
+      border-bottom: 1px solid #E8DFC0;
+      padding: 1.4rem 5%;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.78rem;
+      color: var(--navy);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .trust-item span { font-size: 1.1rem; }
+
+    /* ─── SECTION SHARED ─── */
+    section { padding: 6rem 8%; }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3vw, 2.6rem);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title em {
+      font-family: 'Caveat', cursive;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--navy-mid);
+    }
+
+    .section-lead {
+      font-size: 1rem;
+      color: var(--text-soft);
+      max-width: 540px;
+      font-weight: 400;
+      line-height: 1.75;
+    }
+
+    /* ─── SERVICES ─── */
+    #services { background: var(--warm-white); }
+
+    .services-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+      margin-bottom: 4rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 8px 32px rgba(26, 47, 74, 0.1);
+      transform: translateY(-3px);
+      border-color: transparent;
+    }
+
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-card .emoji {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      background: var(--green-pale);
+    }
+
+    .service-card h3 {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .service-card p {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      line-height: 1.65;
+      font-weight: 400;
+    }
+
+    .service-card.featured {
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .service-card.featured h3 { color: var(--cream); }
+    .service-card.featured p { color: rgba(245,241,232,0.75); }
+    .service-card.featured::before { background: var(--accent); }
+    .service-card.featured .emoji { background: rgba(242,194,48,0.2); }
+
+    /* ─── ABOUT ─── */
+    #about { background: var(--cream); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-visual { position: relative; }
+
+    .about-portrait {
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(26, 47, 74, 0.2);
+      background: var(--navy-mid) url('assets/fred-portrait.png') 75% 8% / 350% no-repeat;
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: var(--navy);
+      color: white;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.62rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      box-shadow: 0 6px 24px rgba(26, 47, 74, 0.35);
+      padding: 0.5rem;
+    }
+
+    .about-badge strong {
+      display: block;
+      font-size: 0.55rem;
+      font-weight: 600;
+      opacity: 0.85;
+      margin-top: 0.15rem;
+    }
+
+    .values-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 2.2rem;
+    }
+
+    .values-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      line-height: 1.65;
+      font-weight: 500;
+    }
+
+    .val-dot {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--navy);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: white;
+    }
+
+    /* ─── HOW IT WORKS ─── */
+    #comment { background: var(--navy); }
+
+    #comment .section-title { color: var(--cream); }
+    #comment .section-label { color: var(--accent); }
+    #comment .section-lead { color: rgba(245,241,232,0.7); }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(245,241,232,0.15), rgba(245,241,232,0.15), transparent);
+    }
+
+    .step { text-align: center; position: relative; }
+
+    .step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--navy-mid);
+      border: 2px solid rgba(245,241,232,0.18);
+      color: var(--cream);
+      font-size: 1.2rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step:first-child .step-num {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--navy);
+    }
+
+    .step h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 0.6rem;
+    }
+
+    .step p {
+      font-size: 0.85rem;
+      color: rgba(245,241,232,0.65);
+      font-weight: 400;
+      line-height: 1.65;
+    }
+
+    /* ─── ZONE ─── */
+    #zone {
+      background: var(--green-pale);
+      padding: 5rem 8%;
+    }
+
+    .zone-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .zone-map {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 2.5rem;
+      box-shadow: 0 4px 24px rgba(26, 47, 74, 0.08);
+    }
+
+    .zone-map h4 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .commune-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .commune {
+      background: var(--green-pale);
+      color: var(--green);
+      border: 1px solid var(--green-light);
+      padding: 0.35rem 0.85rem;
+      border-radius: 2rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .commune.main {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+    }
+
+    .zone-note {
+      margin-top: 1.2rem;
+      font-size: 0.82rem;
+      color: var(--text-light);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    /* ─── TARIFS ─── */
+    #tarifs { background: var(--warm-white); }
+
+    .tarifs-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+    }
+
+    .tarifs-header .section-lead { margin: 0 auto; }
+
+    .tarifs-meta-badge {
+      display: inline-block;
+      background: var(--accent-pale);
+      color: var(--navy);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      border-radius: 2rem;
+      margin-bottom: 1rem;
+      border: 1px solid #E8DFC0;
+    }
+
+    .tarifs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .tarif-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .tarif-card:hover {
+      box-shadow: 0 8px 28px rgba(26, 47, 74, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .tarif-card.featured {
+      background: var(--navy);
+      border-color: var(--navy);
+      grid-column: span 1;
+    }
+
+    .tarif-card.featured .tarif-name,
+    .tarif-card.featured .tarif-price { color: var(--cream); }
+
+    .tarif-card.featured .tarif-desc,
+    .tarif-card.featured .tarif-unit { color: rgba(245, 241, 232, 0.7); }
+
+    .tarif-card.featured .tarif-meta { color: var(--accent-light); }
+
+    .tarif-name {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .tarif-price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+
+    .tarif-price span {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .tarif-unit {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .tarif-desc {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      line-height: 1.55;
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+
+    .tarif-meta {
+      font-size: 0.7rem;
+      color: var(--green);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--border);
+    }
+
+    .tarif-card.featured .tarif-meta { border-top-color: rgba(255,255,255,0.15); }
+
+    .tarifs-note {
+      max-width: 720px;
+      margin: 2.5rem auto 0;
+      padding: 1.25rem 1.5rem;
+      background: var(--accent-pale);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      font-size: 0.88rem;
+      color: var(--navy);
+      line-height: 1.65;
+      font-weight: 500;
+    }
+
+    .tarifs-note strong { font-weight: 700; }
+
+    /* ─── CONTACT ─── */
+    #contact { background: var(--cream); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-info p {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 1.5rem;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-method:hover {
+      border-color: var(--accent);
+      box-shadow: 0 2px 12px rgba(242, 194, 48, 0.2);
+    }
+
+    .cm-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .cm-label {
+      font-size: 0.72rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    .cm-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .contact-hours {
+      background: var(--sky);
+      border: 1px solid var(--sky-dark);
+      border-radius: 12px;
+      padding: 2.2rem;
+      color: var(--navy);
+    }
+
+    .contact-hours h4 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid rgba(26, 47, 74, 0.1);
+      font-size: 0.9rem;
+    }
+
+    .hours-row:last-of-type { border-bottom: none; }
+
+    .hours-day { color: var(--text-soft); font-weight: 500; }
+    .hours-time { color: var(--navy); font-weight: 700; }
+
+    .urgence-note {
+      margin-top: 1.4rem;
+      padding: 1rem 1.2rem;
+      background: var(--accent-pale);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.88rem;
+      color: var(--navy);
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    /* ─── CTA BAND ─── */
+    .cta-band {
+      background: var(--navy);
+      padding: 4.5rem 8%;
+      text-align: center;
+    }
+
+    .cta-band .cta-tagline {
+      font-size: clamp(0.7rem, 2vw, 0.85rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(245,241,232,0.9);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .cta-band h2 {
+      font-family: 'Caveat', cursive;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-band .phone-big {
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .cta-band .phone-big:hover { color: var(--accent-light); }
+
+    .cta-band p {
+      color: rgba(245,241,232,0.75);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-band .btn-white {
+      background: var(--accent);
+      color: var(--navy);
+      text-decoration: none;
+      padding: 1rem 2.4rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: transform 0.15s, box-shadow 0.15s;
+      display: inline-block;
+    }
+
+    .cta-band .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      background: var(--accent-light);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy-dark, #122338);
+      background: #122338;
+      padding: 3rem 8% 2rem;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand .logo-footer {
+      font-weight: 800;
+      color: var(--cream);
+      font-size: 1.1rem;
+    }
+
+    .footer-brand .logo-footer em {
+      font-family: 'Caveat', cursive;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: rgba(245,241,232,0.5);
+      margin-top: 0.8rem;
+      max-width: 320px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    .footer-col h5 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(245,241,232,0.45);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col a {
+      display: block;
+      color: rgba(245,241,232,0.65);
+      text-decoration: none;
+      font-size: 0.88rem;
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+
+    .footer-col a:hover { color: var(--cream); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: rgba(245,241,232,0.4);
+      line-height: 1.6;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-weight: 500;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-legal a {
+      font-size: 0.78rem;
+      color: rgba(245,241,232,0.35);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-legal a:hover { color: rgba(245,241,232,0.65); }
+
+    /* Barre d'appel fixe (mobile) */
+    .mobile-call-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background: var(--navy);
+      padding: 0.75rem 1rem;
+      box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-call-bar a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: 6px;
+    }
+
+    /* ─── RESPONSIVE : tablette (≤1024px) ─── */
+    @media (max-width: 1024px) {
+      section { padding: 4.5rem 5%; }
+      #zone { padding: 4rem 5%; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 3.5rem 5%;
+        gap: 2.5rem;
+      }
+
+      .hero-lead { max-width: none; }
+
+      .hero-card { padding: 2rem; }
+
+      .services-header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .about-visual { max-width: 420px; margin: 0 auto; }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .steps::before { display: none; }
+
+      .zone-inner { grid-template-columns: 1fr; gap: 2rem; }
+
+      .tarifs-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+      .footer-top { grid-template-columns: 1fr 1fr; }
+
+      .cta-band { padding: 3.5rem 5%; }
+
+      footer { padding: 2.5rem 5% 2rem; }
+
+      .trust-bar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem 1.5rem;
+        padding: 1.25rem 5%;
+      }
+
+      .trust-item { justify-content: flex-start; }
+
+      /* Menu latéral */
+      .header-phone { display: flex; }
+
+      .nav-toggle { display: flex; }
+
+      .nav-overlay { display: block; }
+
+      nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(320px, 88vw);
+        height: 100dvh;
+        height: 100vh;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 5.5rem 1.5rem 2rem;
+        gap: 0;
+        box-shadow: -8px 0 32px rgba(0, 0, 0, 0.25);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 200;
+        overflow-y: auto;
+      }
+
+      body.nav-open nav { transform: translateX(0); }
+
+      nav a {
+        margin-left: 0;
+        padding: 0.95rem 0;
+        font-size: 0.9rem;
+        border-bottom: 1px solid rgba(245, 241, 232, 0.1);
+        opacity: 1;
+      }
+
+      nav a:last-child { border-bottom: none; }
+
+      nav .nav-cta {
+        margin-top: 1rem;
+        text-align: center;
+        padding: 0.9rem 1rem !important;
+        border: none;
+      }
+
+      .logo span { display: none; }
+    }
+
+    /* ─── RESPONSIVE : téléphone (≤768px) ─── */
+    @media (max-width: 768px) {
+      section { padding: 3.5rem 1.25rem; }
+      #zone { padding: 3rem 1.25rem; }
+
+      body { padding-bottom: 4.5rem; font-size: 15px; }
+
+      header {
+        min-height: 64px;
+        padding: 0.5rem 1rem;
+      }
+
+      .logo { font-size: 1.05rem; }
+      .logo em { font-size: 1.15rem; }
+      .logo-house { width: 32px; height: 28px; }
+
+      .hero {
+        padding: 2.5rem 1.25rem;
+        gap: 2rem;
+      }
+
+      .hero h1 { font-size: clamp(1.65rem, 7vw, 2.2rem); }
+
+      .hero h1 em { font-size: 1.1em; }
+
+      .hero-badge {
+        font-size: 0.68rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-actions .btn-primary,
+      .hero-actions .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 0.95rem 1.25rem;
+      }
+
+      .hero-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+      }
+
+      .hero-card-title { font-size: 1.45rem; }
+
+      .trust-bar {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1.25rem 1.25rem;
+      }
+
+      .trust-item {
+        font-size: 0.72rem;
+        max-width: none;
+      }
+
+      .section-title { font-size: clamp(1.55rem, 5.5vw, 2rem); }
+
+      .services-grid,
+      .tarifs-grid,
+      .steps { grid-template-columns: 1fr; }
+
+      .service-card { padding: 1.5rem; }
+
+      .about-visual { max-width: 100%; }
+
+      .about-badge {
+        width: 100px;
+        height: 100px;
+        font-size: 0.55rem;
+        right: 0.5rem;
+        bottom: -0.75rem;
+      }
+
+      .values-list li { font-size: 0.9rem; }
+
+      .tarif-card { padding: 1.5rem; }
+
+      .tarif-price { font-size: 1.75rem; }
+
+      .tarifs-note {
+        margin-top: 1.75rem;
+        padding: 1rem 1.1rem;
+        font-size: 0.82rem;
+      }
+
+      .zone-map { padding: 1.5rem; }
+
+      .commune { font-size: 0.78rem; }
+
+      .contact-method { padding: 1rem 1.15rem; }
+
+      .contact-hours { padding: 1.75rem; }
+
+      .cta-band {
+        padding: 3rem 1.25rem;
+      }
+
+      .cta-band .cta-tagline {
+        font-size: 0.65rem;
+        letter-spacing: 0.05em;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .footer-brand p { margin-left: auto; margin-right: auto; }
+
+      .footer-col a { margin-bottom: 0.65rem; }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-copy { font-size: 0.65rem; }
+
+      .mobile-call-bar { display: block; }
+    }
+
+    /* ─── RESPONSIVE : petit téléphone (≤480px) ─── */
+    @media (max-width: 480px) {
+      section { padding: 3rem 1rem; }
+
+      .hero { padding: 2rem 1rem; }
+
+      .hero h1 { font-size: 1.55rem; }
+
+      .hero-lead { font-size: 0.92rem; margin-bottom: 1.75rem; }
+
+      .hero-card { padding: 1.25rem; }
+
+      .service-list li { font-size: 0.85rem; }
+
+      .service-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+      }
+
+      .trust-item {
+        font-size: 0.68rem;
+        gap: 0.5rem;
+      }
+
+      .trust-item span { font-size: 1rem; }
+
+      .tarifs-header { margin-bottom: 2rem; }
+
+      .tarifs-meta-badge { font-size: 0.65rem; }
+
+      .cta-band .phone-big { font-size: 1.85rem; word-break: break-word; }
+
+      .cta-band .btn-white {
+        width: 100%;
+        padding: 0.95rem 1rem;
+      }
+
+      nav { width: 100vw; }
+
+      .header-phone { width: 40px; height: 40px; }
+
+      .nav-toggle { width: 40px; height: 40px; }
+    }
+
+    /* Tablette paysage : nav visible si assez large */
+    @media (min-width: 1025px) and (max-width: 1200px) {
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.72rem;
+      }
+
+      .nav-cta { padding: 0.45rem 0.9rem !important; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      nav, .nav-toggle span, .nav-overlay { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">
+      <svg class="logo-house" viewBox="0 0 52 48" aria-hidden="true">
+        <path d="M26 4 L48 22 V44 H4 V22 Z" fill="none" stroke="#F5F1E8" stroke-width="3"/>
+        <rect x="17" y="24" width="18" height="16" fill="#F2C230" stroke="#F5F1E8" stroke-width="2"/>
+        <line x1="26" y1="24" x2="26" y2="40" stroke="#F5F1E8" stroke-width="1.5"/>
+        <line x1="17" y1="32" x2="35" y2="32" stroke="#F5F1E8" stroke-width="1.5"/>
+      </svg>
+      <div>Frédéric <em>Services</em><span>Bordeaux &amp; alentours</span></div>
+    </a>
+    <a href="tel:+33603634553" class="header-phone" aria-label="Appeler le 06 03 63 45 53">📞</a>
+    <button type="button" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-overlay" aria-hidden="true"></div>
+    <nav id="site-nav">
+      <a href="#services">Services</a>
+      <a href="#about">À propos</a>
+      <a href="#comment">Comment ça marche</a>
+      <a href="#zone">Zone</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+33603634553" class="nav-cta">06 03 63 45 53</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Service local de proximité</div>
+      <h1>
+        Des courses, des démarches,
+        <em>une présence de confiance.</em>
+      </h1>
+      <p class="hero-lead">
+        Je vous accompagne au quotidien : livraisons, démarches administratives, petits projets à la maison…
+        Toujours avec patience, discrétion et le sourire.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+33603634553" class="btn-primary">📞 Appeler maintenant</a>
+        <a href="#services" class="btn-secondary">Voir les services</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <p class="hero-card-title">Je peux vous aider pour :</p>
+      <ul class="service-list">
+        <li><span class="service-icon ic-green">🛒</span> Courses &amp; alimentation</li>
+        <li><span class="service-icon ic-purple">💊</span> Médicaments &amp; pharmacie</li>
+        <li><span class="service-icon ic-orange">📦</span> Colis &amp; livraisons</li>
+        <li><span class="service-icon ic-blue">🖨</span> Impressions &amp; photocopies</li>
+        <li><span class="service-icon ic-gold">📋</span> Démarches administratives</li>
+      </ul>
+      <div class="hero-card-footer">
+        <span class="zone-dot"></span>
+        Bordeaux, Mérignac, Pessac et alentours
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-bar">
+    <div class="trust-item"><span>👥</span> Service humain &amp; de confiance</div>
+    <div class="trust-item"><span>🔒</span> Discrétion garantie</div>
+    <div class="trust-item"><span>🏠</span> Déplacement à domicile</div>
+    <div class="trust-item"><span>📅</span> Disponible 6 jours sur 7</div>
+    <div class="trust-item"><span>📞</span> Joignable par téléphone</div>
+  </div>
+
+  <section id="services">
+    <div class="services-header">
+      <div>
+        <p class="section-label">Mes prestations</p>
+        <h2 class="section-title">Tout ce dont vous avez <em>besoin au quotidien</em></h2>
+      </div>
+      <p class="section-lead">
+        Pas d'application, pas de compte, pas d'internet — un simple appel suffit.
+        Je m'adapte à votre situation avec bienveillance.
+      </p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <span class="emoji">🛒</span>
+        <h3>Courses &amp; alimentation</h3>
+        <p>Faire vos courses, livrer vos achats, vous décharger de cette corvée.</p>
+      </article>
+      <article class="service-card">
+        <span class="emoji">💊</span>
+        <h3>Médicaments &amp; pharmacie</h3>
+        <p>Récupérer vos ordonnances et médicaments en toute sécurité.</p>
+      </article>
+      <article class="service-card">
+        <span class="emoji">📦</span>
+        <h3>Colis &amp; livraisons</h3>
+        <p>Récupérer ou déposer vos colis, courriers et documents importants.</p>
+      </article>
+      <article class="service-card">
+        <span class="emoji">🖨</span>
+        <h3>Impressions &amp; photocopies</h3>
+        <p>Imprimer, photocopier, scanner vos documents administratifs.</p>
+      </article>
+      <article class="service-card featured">
+        <span class="emoji">📋</span>
+        <h3>Démarches administratives</h3>
+        <p>Vous accompagner dans vos démarches, formulaires et rendez-vous officiels.</p>
+      </article>
+      <article class="service-card">
+        <span class="emoji">🔧</span>
+        <h3>Installation &amp; montage</h3>
+        <p>Monter vos meubles, installer vos équipements du quotidien.</p>
+      </article>
+      <article class="service-card">
+        <span class="emoji">🚗</span>
+        <h3>Accompagnement rendez-vous</h3>
+        <p>Vous conduire et vous accompagner à vos rendez-vous médicaux ou administratifs.</p>
+      </article>
+      <article class="service-card">
+        <span class="emoji">⚡</span>
+        <h3>Courses express</h3>
+        <p>Courses urgentes, oublis du quotidien, besoins de dernière minute.</p>
+      </article>
+      <article class="service-card">
+        <span class="emoji">💛</span>
+        <h3>Service sur mesure</h3>
+        <p>Un besoin particulier ? Parlons-en, je m'adapte à votre situation.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-portrait" role="img" aria-label="Frédéric, votre aide à domicile à Bordeaux"></div>
+        <div class="about-badge">
+          SERVICE<br />LOCAL
+          <strong>de proximité ♥</strong>
+        </div>
+      </div>
+      <div>
+        <p class="section-label">Qui suis-je ?</p>
+        <h2 class="section-title">Frédéric, <em>simplement humain</em></h2>
+        <p class="section-lead">
+          Basé à Bordeaux, je propose une aide de confiance pour les courses, les démarches
+          et la présence au quotidien. Une relation directe, sans intermédiaire ni application.
+        </p>
+        <ul class="values-list">
+          <li><span class="val-dot">👥</span><span><strong>Service humain</strong> — Une vraie personne, pas un algorithme. Je prends le temps de vous écouter.</span></li>
+          <li><span class="val-dot">🔒</span><span><strong>Discrétion garantie</strong> — Votre vie privée est respectée, toujours.</span></li>
+          <li><span class="val-dot">🏠</span><span><strong>À domicile</strong> — Je me déplace chez vous et dans votre quartier.</span></li>
+          <li><span class="val-dot">😊</span><span><strong>Avec le sourire</strong> — Patience et bienveillance à chaque intervention.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="comment">
+    <p class="section-label">Simple &amp; direct</p>
+    <h2 class="section-title">Comment ça <em>marche ?</em></h2>
+    <p class="section-lead">Quatre étapes, zéro complication. Comme sur le flyer : un appel suffit.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Vous appelez</h4>
+        <p>Un simple coup de fil, sans application ni compte en ligne.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>On échange</h4>
+        <p>Je prends le temps de comprendre votre besoin avec patience.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Je m'occupe de tout</h4>
+        <p>Courses, démarches, livraisons — je m'exécute avec discrétion.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>C'est réglé</h4>
+        <p>Votre quotidien simplifié, avec le sourire.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="zone">
+    <div class="zone-inner">
+      <div>
+        <p class="section-label">Zone d'intervention</p>
+        <h2 class="section-title">Je me déplace <em>près de chez vous</em></h2>
+        <p class="section-lead" style="margin-top: 1rem;">
+          Bordeaux et toutes les communes alentours. N'hésitez pas à me contacter
+          pour vérifier si je couvre votre secteur.
+        </p>
+      </div>
+      <div class="zone-map">
+        <h4>📍 Je me déplace sur :</h4>
+        <div class="commune-list">
+          <span class="commune main">Bordeaux</span>
+          <span class="commune">Mérignac</span>
+          <span class="commune">Pessac</span>
+          <span class="commune">Talence</span>
+          <span class="commune">Bègles</span>
+          <span class="commune">Gradignan</span>
+          <span class="commune">Villenave-d'Ornon</span>
+          <span class="commune">Cenon</span>
+          <span class="commune">Lormont</span>
+          <span class="commune">Floirac</span>
+        </div>
+        <p class="zone-note">Autres communes : me contacter pour vérifier la faisabilité.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tarifs">
+    <div class="tarifs-header">
+      <span class="tarifs-meta-badge">Données indicatives</span>
+      <p class="section-label">Tarification</p>
+      <h2 class="section-title">Tarifs <em>transparents</em></h2>
+      <p class="section-lead">
+        Grille provisoire à titre d'information. Le devis définitif est établi par téléphone,
+        selon la durée, la distance et la nature de la prestation.
+      </p>
+    </div>
+
+    <div class="tarifs-grid" itemscope itemtype="https://schema.org/OfferCatalog">
+      <meta itemprop="name" content="Tarifs Frédéric Services" />
+      <article class="tarif-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="name" content="Courses et courses express" />
+        <h3 class="tarif-name">Courses &amp; livraisons</h3>
+        <p class="tarif-price" itemprop="price" content="18">18 €<span> / h</span></p>
+        <meta itemprop="priceCurrency" content="EUR" />
+        <p class="tarif-unit">Tarif horaire · déplacement inclus zone Bordeaux</p>
+        <p class="tarif-desc" itemprop="description">Courses alimentaires, pharmacie, colis et petites livraisons.</p>
+        <p class="tarif-meta">Prix indicatif · à confirmer</p>
+      </article>
+      <article class="tarif-card featured" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="name" content="Démarches et accompagnement" />
+        <h3 class="tarif-name">Démarches &amp; accompagnement</h3>
+        <p class="tarif-price" itemprop="price" content="22">22 €<span> / h</span></p>
+        <meta itemprop="priceCurrency" content="EUR" />
+        <p class="tarif-unit">Tarif horaire · rendez-vous &amp; administratif</p>
+        <p class="tarif-desc" itemprop="description">Accompagnement administratif, impressions, présence aux rendez-vous.</p>
+        <p class="tarif-meta">Prestation la plus demandée</p>
+      </article>
+      <article class="tarif-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="name" content="Installation et bricolage léger" />
+        <h3 class="tarif-name">Installation &amp; montage</h3>
+        <p class="tarif-price" itemprop="price" content="25">25 €<span> / h</span></p>
+        <meta itemprop="priceCurrency" content="EUR" />
+        <p class="tarif-unit">Tarif horaire · main-d'œuvre</p>
+        <p class="tarif-desc" itemprop="description">Montage de meubles, petites installations du quotidien.</p>
+        <p class="tarif-meta">Hors fournitures</p>
+      </article>
+      <article class="tarif-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="name" content="Forfait demi-journée" />
+        <h3 class="tarif-name">Forfait demi-journée</h3>
+        <p class="tarif-price" itemprop="price" content="85">85 €<span> / 4 h</span></p>
+        <meta itemprop="priceCurrency" content="EUR" />
+        <p class="tarif-unit">Forfait · missions combinées</p>
+        <p class="tarif-desc" itemprop="description">Idéal pour enchaîner plusieurs petites tâches la même journée.</p>
+        <p class="tarif-meta">Économie estimée ~15 %</p>
+      </article>
+      <article class="tarif-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="name" content="Forfait journée" />
+        <h3 class="tarif-name">Forfait journée</h3>
+        <p class="tarif-price" itemprop="price" content="150">150 €<span> / 8 h</span></p>
+        <meta itemprop="priceCurrency" content="EUR" />
+        <p class="tarif-unit">Forfait · accompagnement prolongé</p>
+        <p class="tarif-desc" itemprop="description">Journée complète d'aide à domicile ou d'accompagnement.</p>
+        <p class="tarif-meta">Sur devis téléphonique</p>
+      </article>
+      <article class="tarif-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="name" content="Service sur mesure" />
+        <h3 class="tarif-name">Sur mesure</h3>
+        <p class="tarif-price">Sur <span>devis</span></p>
+        <p class="tarif-unit">Selon votre besoin particulier</p>
+        <p class="tarif-desc" itemprop="description">Besoin spécifique ou récurrent ? Appelons-nous pour un tarif adapté.</p>
+        <p class="tarif-meta">Devis gratuit · sans engagement</p>
+      </article>
+    </div>
+
+    <p class="tarifs-note">
+      <strong>Tarifs provisoires</strong> — Ces montants sont des fourchettes indicatives
+      en attendant la grille définitive. Frais kilométriques éventuels hors zone Bordeaux,
+      dimanches et jours fériés : me contacter au <a href="tel:+33603634553" style="color: var(--navy); font-weight: 700;">06 03 63 45 53</a>.
+      Crédit d'impôt services à la personne : renseignements sur demande.
+    </p>
+  </section>
+
+  <section id="contact">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="section-label">Contact</p>
+        <h3>Un besoin ? Je suis là.</h3>
+        <p>
+          L'appel direct reste toujours la façon la plus simple et la plus agréable pour me joindre.
+          Frédéric prend le temps de comprendre votre besoin avec patience et le sourire.
+        </p>
+        <div class="contact-methods">
+          <a href="tel:+33603634553" class="contact-method">
+            <span class="cm-icon">📞</span>
+            <div>
+              <div class="cm-label">Téléphone</div>
+              <div class="cm-value">06 03 63 45 53</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-hours">
+        <h4>📅 Mes disponibilités</h4>
+        <div class="hours-row"><span class="hours-day">Lundi – Vendredi</span><span class="hours-time">8h30 – 19h00</span></div>
+        <div class="hours-row"><span class="hours-day">Samedi</span><span class="hours-time">9h00 – 17h00</span></div>
+        <div class="hours-row"><span class="hours-day">Dimanche</span><span class="hours-time">Sur demande</span></div>
+        <p class="urgence-note">
+          Pas d'application, pas de compte, pas d'internet — un simple appel suffit !
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <p class="cta-tagline">Pas d'application · pas de compte · pas d'internet</p>
+    <h2>Une aide de confiance, simplement humaine.</h2>
+    <a href="tel:+33603634553" class="phone-big">06 03 63 45 53</a>
+    <p>Appelez-moi directement — c'est toujours la façon la plus simple pour me joindre.</p>
+    <a href="tel:+33603634553" class="btn-white">Appeler Frédéric</a>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-footer">Frédéric <em>Services</em></div>
+        <p>Micro-entreprise de services à la personne à Bordeaux. Votre quotidien, simplifié.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <a href="#services">Services</a>
+        <a href="#about">À propos</a>
+        <a href="#comment">Comment ça marche</a>
+        <a href="#zone">Zone</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:+33603634553">06 03 63 45 53</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        Frédéric Manuel Decastro Carneiro – Micro-entreprise de services à la personne – Bordeaux
+      </p>
+    </div>
+  </footer>
+
+  <div class="mobile-call-bar">
+    <a href="tel:+33603634553">📞 Appeler — 06 03 63 45 53</a>
+  </div>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var overlay = document.querySelector('.nav-overlay');
+      var navLinks = document.querySelectorAll('#site-nav a');
+
+      function closeNav() {
+        document.body.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Ouvrir le menu');
+      }
+
+      function openNav() {
+        document.body.classList.add('nav-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Fermer le menu');
+      }
+
+      toggle.addEventListener('click', function () {
+        document.body.classList.contains('nav-open') ? closeNav() : openNav();
+      });
+
+      overlay.addEventListener('click', closeNav);
+
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', closeNav);
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 1024) closeNav();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeNav();
+      });
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Frédéric Services",
+    "description": "Aide à domicile et services à la personne à Bordeaux et alentours.",
+    "telephone": "+33603634553",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bordeaux",
+      "addressRegion": "Nouvelle-Aquitaine",
+      "addressCountry": "FR"
+    },
+    "areaServed": ["Bordeaux", "Mérignac", "Pessac", "Talence", "Bègles", "Gradignan"],
+    "priceRange": "€€",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Tarifs indicatifs Frédéric Services",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Courses & livraisons", "price": "18", "priceCurrency": "EUR", "description": "Tarif horaire indicatif" },
+        { "@type": "Offer", "name": "Démarches & accompagnement", "price": "22", "priceCurrency": "EUR", "description": "Tarif horaire indicatif" },
+        { "@type": "Offer", "name": "Installation & montage", "price": "25", "priceCurrency": "EUR", "description": "Tarif horaire indicatif" },
+        { "@type": "Offer", "name": "Forfait demi-journée", "price": "85", "priceCurrency": "EUR", "description": "4 heures · indicatif" },
+        { "@type": "Offer", "name": "Forfait journée", "price": "150", "priceCurrency": "EUR", "description": "8 heures · indicatif" }
+      ]
+    }
+  }
+  </script>
+
+</body>
+</html>
