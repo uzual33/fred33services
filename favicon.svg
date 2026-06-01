@@ -1,9 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Frédéric Services">
-  <rect width="32" height="32" rx="6" fill="#1A2F4A"/>
-  <g transform="translate(3.5, 4) scale(0.5)">
-    <path d="M26 4 L48 22 V44 H4 V22 Z" fill="none" stroke="#F5F1E8" stroke-width="3"/>
-    <rect x="17" y="24" width="18" height="16" fill="#F2C230" stroke="#F5F1E8" stroke-width="2"/>
-    <line x1="26" y1="24" x2="26" y2="40" stroke="#F5F1E8" stroke-width="1.5"/>
-    <line x1="17" y1="32" x2="35" y2="32" stroke="#F5F1E8" stroke-width="1.5"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="5" fill="#1A2F4A"/>
+  <path d="M16 5 L27 14 V27 H5 V14 Z" fill="none" stroke="#F5F1E8" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="11" y="17" width="10" height="10" fill="#F2C230" stroke="#F5F1E8" stroke-width="1.5"/>
+  <path d="M16 17 V27 M11 22 H21" stroke="#F5F1E8" stroke-width="1"/>
 </svg>
